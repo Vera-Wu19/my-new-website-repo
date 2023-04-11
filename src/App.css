@@ -1,38 +1,335 @@
-.App {
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Styles */
+body {
+  font-family: "Noto Serif SC", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #f5f5f7;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+  background-color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0;
+}
+
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  float: left;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+header nav {
+  float: right;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+header ul {
+  list-style: none;
+}
+
+header li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+header li a {
+  font-size: 16px;
+  color: #fff;
+  transition: all 0.3s ease;
+  line-height: 60px;
+}
+
+header li a:hover {
+  color: #999;
+}
+
+/* Hero Section Styles */
+.hero {
+  background-color: #333;
+  color: #fff;
+  padding: 150px 0;
+  text-align: center;
+  background-image: url("https://unsplash.com/photos/oqStl2L5oxI");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #fff;
+  color: #333;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #999;
+  color: #fff;
+}
+
+/* Service Sections Styles */
+.resume-editing,
+.interview-simulation,
+.about-us,
+.contact-us {
+  background-color: #f5f5f7;
+  padding: 100px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.resume-editing h2,
+.interview-simulation h2,
+.about-us h2,
+.contact-us h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.resume-editing p,
+.interview-simulation p,
+.about-us p,
+.contact-us p {
+  font-size: 20px;
+  margin-bottom: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  border-top: 1px solid #ddd;
 }
 
-.App-link {
-  color: #61dafb;
+footer nav {
+  display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer ul {
+  list-style: none;
+}
+
+footer li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+footer li:first-child {
+  margin-left: 0;
+}
+
+footer li a {
+  font-size: 16px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+footer li a:hover {
+  color: #999;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+/* Contact Form Styles */
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 150px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.submit-btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #999;
+  color: #fff;
+}
+
+/* Interview Service Styles */
+.container-fluid {
+  padding: 0;
+}
+
+.sidebar {
+  padding: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+  background-color: #f8f9fa;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #343a40;
+}
+
+.interview-question {
+  margin-bottom: 1rem;
+}
+
+.card-wrapper {
+  margin-bottom: 1rem;
+}
+
+.cta-btn {
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Resume Service Styles */
+.resume-service .form {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resume-service .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.resume-service .form-control {
+  border-radius: 0.5rem;
+}
+
+.resume-service .cta-btn {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resume-service .cta-btn:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.optimized-resume {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.optimized-resume pre {
+  white-space: pre-wrap;
+  word-break: break-word;
 }
