@@ -1,14 +1,12 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    }
-  ],
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "command": "npm run build",
+    "outputDirectory": "build"
+  },
   "routes": [
     {
       "src": "/(.*)",
